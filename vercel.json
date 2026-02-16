@@ -14,7 +14,6 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://your_vercel_domain.vercel.app/",
         "APP_KEY": "base64:smyMotQ0KujczQN6kIIeNOEE6SlnvTOlPpTsGEIL07U=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -25,8 +24,7 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION":"pgsql",
-        "ASSET_URL":"https://your_vercel_domain.vercel.app/",
-        "DB_URL":"YOUR_DB_URL"
+        "DB_CONNECTION":"mysql",
+        "DB_URL":"mysql://root:gSYcJrDGltgKHjwTxxPKjPtxhwQVMqXU@mysql.railway.internal:3306/movie_app_db"
     }
 }
