@@ -14,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_KEY": "base64:smyMotQ0KujczQN6kIIeNOEE6SlnvTOlPpTsGEIL07U=",
+        "APP_KEY": "base64:rhNWkAAgV24duip0+R37x+0HXWa26YW8HbR6GnzI6M0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
