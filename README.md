@@ -1,6 +1,16 @@
-# Aplikasi Film (Movie App)
+# 🎬 Aplikasi Film (Movie App)
 
-Aplikasi film berbasis Laravel yang memungkinkan pengguna untuk menjelajahi film, mencari, dan mengelola daftar favorit mereka.
+Aplikasi katalog film modern berbasis Laravel yang memungkinkan pengguna untuk menjelajahi film, mencari judul favorit, dan mengelola daftar tontonan mereka dengan antarmuka yang elegan dan responsif.
+
+## ✨ Fitur Baru (Update UI)
+
+Kami telah melakukan perombakan besar-besaran pada tampilan antarmuka (UI) untuk memberikan pengalaman pengguna terbaik:
+
+- **Modern Light Theme**: Tampilan bersih dan cerah dengan warna primer Indigo yang modern.
+- **Desain Responsif**: Tampilan yang optimal di semua perangkat (Desktop, Tablet, Mobile).
+- **Interaktif**: Efek hover yang halus, animasi transisi, dan feedback visual yang menarik.
+- **Notifikasi Cantik**: Integrasi **SweetAlert2** untuk pesan sukses dan error yang lebih informatif.
+- **Font Modern**: Menggunakan Google Font **Poppins** untuk keterbacaan yang lebih baik.
 
 ## 🛠 Stack Teknologi
 
@@ -8,88 +18,71 @@ Aplikasi film berbasis Laravel yang memungkinkan pengguna untuk menjelajahi film
 
 - **Framework:** [Laravel 12](https://laravel.com)
 - **Bahasa:** PHP 8.2+
-- **HTTP Client:** GuzzleHTTP
-- **Testing:** Pest / PHPUnit
+- **Database:** MySQL / MariaDB
 
 ### Frontend
 
-- **Build Tool:** [Vite 6.0](https://vitejs.dev)
-- **CSS Framework:** [TailwindCSS 4.0](https://tailwindcss.com)
-- **Templating:** Blade
-- **HTTP Client:** Axios
+- **CSS Framework:** [Tailwind CSS](https://tailwindcss.com) (via CDN untuk fleksibilitas)
+- **Ikon:** Font Awesome 6
+- **Font:** Poppins (Google Fonts)
+- **Notifikasi:** SweetAlert2
+- **Scripting:** JavaScript (Vanilla + jQuery)
 
-## 🏗 Arsitektur
+## 🏗 Struktur Proyek
 
-Aplikasi ini mengikuti pola arsitektur standar **MVC (Model-View-Controller)** yang disediakan oleh Laravel.
+Aplikasi ini mengikuti pola arsitektur **MVC (Model-View-Controller)**:
 
-### Komponen Utama
+- **Controllers** (`app/Http/Controllers`): Menangani logika bisnis.
+- **Models** (`app/Models`): Representasi data database.
+- **Views** (`resources/views`): Antarmuka pengguna (Blade Templates).
+- **Routes** (`routes/web.php`): Definisi jalur URL aplikasi.
 
-- **Controllers:** Menangani logika aplikasi dan mengembalikan tampilan (view).
-    - `AuthController`: Mengelola autentikasi pengguna (Login/Logout).
-    - `MovieController`: Menangani daftar film, pencarian, dan pengambilan detail film.
-    - `FavoriteController`: Mengelola daftar film favorit pengguna.
-- **Models:** Merepresentasikan struktur data dan berinteraksi dengan database.
-    - `User`: Merepresentasikan pengguna aplikasi.
-    - `Favorite`: Merepresentasikan hubungan antara pengguna dan film favorit mereka.
-- **Views:** Template Blade yang terletak di `resources/views`.
-    - Menggunakan tata letak utama (`layouts/app.blade.php`) untuk desain yang konsisten.
-    - Komponen untuk elemen UI yang dapat digunakan kembali.
-- **Middleware:**
-    - `auth.custom`: Middleware kustom untuk melindungi rute yang memerlukan autentikasi.
-- **Lokalisasi (Localization):**
-    - Mendukung bahasa Inggris (`en`) dan Indonesia (`id`).
-    - Logika penggantian bahasa diimplementasikan melalui rute dan session.
+## 🚀 Cara Menjalankan (Getting Started)
 
-## 🚀 Memulai (Getting Started)
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi di komputer lokal Anda:
 
-1.  **Clone repositori**
+1.  **Clone Repositori**
 
     ```bash
     git clone <repository-url>
     cd movie-app
     ```
 
-2.  **Instal dependensi PHP**
+2.  **Instal Dependensi**
 
     ```bash
     composer install
-    ```
-
-3.  **Instal dependensi Node.js**
-
-    ```bash
     npm install
     ```
 
-4.  **Pengaturan Lingkungan (Environment)**
+3.  **Konfigurasi Environment**
+    Salin file `.env.example` menjadi `.env` dan sesuaikan konfigurasi database Anda.
 
     ```bash
     cp .env.example .env
     php artisan key:generate
     ```
 
-    _Konfigurasikan kredensial database Anda di file `.env`._
-
-5.  **Jalankan Migrasi**
+4.  **Migrasi Database**
 
     ```bash
     php artisan migrate
     ```
 
-6.  **Jalankan Aplikasi**
-    - Mulai server Laravel:
-        ```bash
-        php artisan serve
-        ```
-    - Mulai server pengembangan Vite (di terminal terpisah):
-        ```bash
-        npm run dev
-        ```
+5.  **Jalankan Aplikasi**
+    ```bash
+    php artisan serve
+    ```
+    Buka browser dan akses: `http://localhost:8000`
 
-## 📝 Fitur
+## 📝 Dokumentasi Kode
 
-- **Autentikasi Pengguna:** Fungsionalitas login dan logout yang aman.
-- **Penjelajahan Film:** Melihat daftar film populer atau yang sedang tren.
-- **Pencarian:** Mencari film berdasarkan judul.
-- **Favorit:** Menambahkan atau menghapus film dari daftar favorit pribadi.
-- **Dukungan Multi-bahasa:** Beralih antara antarmuka bahasa Inggris dan Indonesia.
+Sesuai permintaan, seluruh kode baru telah dilengkapi dengan komentar dan dokumentasi dalam **Bahasa Indonesia** untuk memudahkan pengembangan dan pemeliharaan selanjutnya.
+
+## 📄 Lisensi
+
+Aplikasi ini bersifat open-source dan dilisensikan di bawah [MIT license](https://opensource.org/licenses/MIT).
+
+---
+
+Dibuat dengan ❤️ oleh Kevin.
